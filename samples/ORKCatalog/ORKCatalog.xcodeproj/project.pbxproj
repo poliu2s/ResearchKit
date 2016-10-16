@@ -13,9 +13,9 @@
 		3ED967B81AC13D37007E2D83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ED967BA1AC13D37007E2D83 /* Localizable.strings */; };
 		863CCD821ACF545E009FD3B4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863CCD811ACF545E009FD3B4 /* HealthKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		86B89AA51AB2C0A5001626A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B89A9C1AB2C0A5001626A4 /* AppDelegate.swift */; };
+		A7C624301DB1EC6F00008772 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C6242C1DB1EC5900008772 /* ResearchKit.framework */; };
+		A7C624311DB1EC6F00008772 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7C6242C1DB1EC5900008772 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B125E3D41B1BA47600FF8759 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = B125E3D31B1BA47600FF8759 /* tap.aif */; };
-		BC2A3CD91C58F1CA00DA64B7 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2A3CD81C58F1CA00DA64B7 /* ResearchKit.framework */; };
-		BC2A3CDA1C58F1CA00DA64B7 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC2A3CD81C58F1CA00DA64B7 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC9A27341B82740D00BDA84D /* TaskListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A27321B82740D00BDA84D /* TaskListRow.swift */; };
 		BC9A27351B82740D00BDA84D /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A27331B82740D00BDA84D /* TaskListViewController.swift */; };
 		BC9A273C1B82741900BDA84D /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9A27381B82741900BDA84D /* ImageTableViewCell.swift */; };
@@ -28,13 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BC2A3CDB1C58F1CA00DA64B7 /* Embed Frameworks */ = {
+		A7C624321DB1EC6F00008772 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BC2A3CDA1C58F1CA00DA64B7 /* ResearchKit.framework in Embed Frameworks */,
+				A7C624311DB1EC6F00008772 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,8 +90,8 @@
 		869230BE1AAA890A00BFE11B /* ORKCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORKCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B89A981AB2C0A5001626A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86B89A9C1AB2C0A5001626A4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ORKCatalog/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		A7C6242C1DB1EC5900008772 /* ResearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ResearchKit.framework; sourceTree = "<group>"; };
 		B125E3D31B1BA47600FF8759 /* tap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.aif; sourceTree = "<group>"; };
-		BC2A3CD81C58F1CA00DA64B7 /* ResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9A27321B82740D00BDA84D /* TaskListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListRow.swift; path = Tasks/TaskListRow.swift; sourceTree = "<group>"; };
 		BC9A27331B82740D00BDA84D /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = Tasks/TaskListViewController.swift; sourceTree = "<group>"; };
 		BC9A27381B82741900BDA84D /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTableViewCell.swift; path = Results/ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2A3CD91C58F1CA00DA64B7 /* ResearchKit.framework in Frameworks */,
+				A7C624301DB1EC6F00008772 /* ResearchKit.framework in Frameworks */,
 				863CCD821ACF545E009FD3B4 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +149,7 @@
 		869230B51AAA890A00BFE11B = {
 			isa = PBXGroup;
 			children = (
+				A7C6242C1DB1EC5900008772 /* ResearchKit.framework */,
 				3E39B9E81ABF675000C2ABE5 /* README.md */,
 				BC2A3C9E1C58E81500DA64B7 /* Frameworks */,
 				869230C01AAA890A00BFE11B /* ORKCatalog */,
@@ -189,7 +190,6 @@
 		BC2A3C9E1C58E81500DA64B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BC2A3CD81C58F1CA00DA64B7 /* ResearchKit.framework */,
 				863CCD811ACF545E009FD3B4 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -217,7 +217,7 @@
 				869230BA1AAA890A00BFE11B /* Sources */,
 				869230BB1AAA890A00BFE11B /* Frameworks */,
 				869230BC1AAA890A00BFE11B /* Resources */,
-				BC2A3CDB1C58F1CA00DA64B7 /* Embed Frameworks */,
+				A7C624321DB1EC6F00008772 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -493,7 +493,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ORKCatalog/Supporting Files/ORKCatalog.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ORKCatalog/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -510,7 +513,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ORKCatalog/Supporting Files/ORKCatalog.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ORKCatalog/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

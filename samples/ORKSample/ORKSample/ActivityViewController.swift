@@ -32,7 +32,7 @@ import UIKit
 import ResearchKit
 
 enum Activity: Int {
-    case survey, microphone, tapping
+    case survey //, microphone, tapping
     
     static var allValues: [Activity] {
         var index = 0
@@ -48,22 +48,22 @@ enum Activity: Int {
     var title: String {
         switch self {
             case .survey:
-                return "Survey"
-            case .microphone:
-                return "Microphone"
-            case .tapping:
-                return "Tapping"
+                return "Rare Bones Growth Chart Survey"
+//            case .microphone:
+//                return "Microphone"
+//            case .tapping:
+//                return "Tapping"
         }
     }
     
     var subtitle: String {
         switch self {
             case .survey:
-                return "Answer 6 short questions"
-            case .microphone:
-                return "Voice evaluation"
-            case .tapping:
-                return "Test tapping speed"
+                return "Answer 8 short questions"
+//            case .microphone:
+//                return "Voice evaluation"
+//            case .tapping:
+//                return "Test tapping speed"
         }
     }
 }
@@ -97,29 +97,32 @@ class ActivityViewController: UITableViewController {
         switch activity {
             case .survey:
                 taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRun: NSUUID() as UUID)
-            
-            case .microphone:
-                taskViewController = ORKTaskViewController(task: StudyTasks.microphoneTask, taskRun: NSUUID() as UUID)
-                
-                do {
-                    let defaultFileManager = FileManager.default
-                    
-                    // Identify the documents directory.
-                    let documentsDirectory = try defaultFileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-                    
-                    // Create a directory based on the `taskRunUUID` to store output from the task.
-                    let outputDirectory = documentsDirectory.appendingPathComponent(taskViewController.taskRunUUID.uuidString)
-                    try defaultFileManager.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
-                    
-                    taskViewController.outputDirectory = outputDirectory
-                }
-                catch let error as NSError {
-                    fatalError("The output directory for the task with UUID: \(taskViewController.taskRunUUID.uuidString) could not be created. Error: \(error.localizedDescription)")
-                }
-                
-            case .tapping:
-                taskViewController = ORKTaskViewController(task: StudyTasks.tappingTask, taskRun: NSUUID() as UUID)
+            default:
+                print("klsdjf")
         }
+        
+//            case .microphone:
+//                taskViewController = ORKTaskViewController(task: StudyTasks.microphoneTask, taskRun: NSUUID() as UUID)
+//                
+//                do {
+//                    let defaultFileManager = FileManager.default
+//                    
+//                    // Identify the documents directory.
+//                    let documentsDirectory = try defaultFileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+//                    
+//                    // Create a directory based on the `taskRunUUID` to store output from the task.
+//                    let outputDirectory = documentsDirectory.appendingPathComponent(taskViewController.taskRunUUID.uuidString)
+//                    try defaultFileManager.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
+//                    
+//                    taskViewController.outputDirectory = outputDirectory
+//                }
+//                catch let error as NSError {
+//                    fatalError("The output directory for the task with UUID: \(taskViewController.taskRunUUID.uuidString) could not be created. Error: \(error.localizedDescription)")
+//                }
+//                
+//            case .tapping:
+//                taskViewController = ORKTaskViewController(task: StudyTasks.tappingTask, taskRun: NSUUID() as UUID)
+//        }
 
         taskViewController.delegate = self
         navigationController?.present(taskViewController, animated: true, completion: nil)

@@ -50,12 +50,14 @@ class ResearchContainerViewController: UIViewController, HealthClientType {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
-            toStudy()
-        }
-        else {
-            toOnboarding()
-        }
+//        if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
+//            toStudy()
+//        }
+//        else {
+//            toOnboarding()
+//        }
+//        toStudy()
+        toOnboarding()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

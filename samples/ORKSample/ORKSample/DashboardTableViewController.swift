@@ -35,14 +35,16 @@ class DashboardTableViewController: UITableViewController {
     // MARK: Properties
     
     @IBOutlet var pieChart: ORKPieChartView!
+//    @IBOutlet var pieChart: ORKLineGraphChartView!
     @IBOutlet var discreteGraph: ORKDiscreteGraphChartView!
     @IBOutlet var lineGraph: ORKLineGraphChartView!
     
     var allCharts: [UIView] {
-        return [pieChart, discreteGraph, lineGraph]
+        return [lineGraph]
     }
     
     let pieChartDataSource = PieChartDataSource()
+//    let pieChartDataSource = LineGraphDataSource()
     let discreteGraphDataSource = DiscreteGraphDataSource()
     let lineGraphDataSource = LineGraphDataSource()    
     
@@ -53,6 +55,7 @@ class DashboardTableViewController: UITableViewController {
         
         // Set the data source for each graph
         pieChart.dataSource = pieChartDataSource
+//        pieChart.dataSource = lineGraphDataSource
         discreteGraph.dataSource = discreteGraphDataSource
         lineGraph.dataSource = lineGraphDataSource
         
